@@ -7,9 +7,34 @@
 
 A tmux parameterizer
 
+Zmux provides a simple way to parameterize commands across several tmux panes. A simple example:
+
+    $ zmux launch "ls {directory}"
+    Supply up to 6 values for directory: ., zmux
+
+    💅 Creating tmux layout
+    
+    🚀 Sending command to pane 1/2
+    🚀 Sending command to pane 2/2
+
+[//]: #
+
+    % ls .
+    LICENSE         setup.py        zmux
+    README.md       tests           zmux.egg-info
+    
+    ______________________________________________________
+
+    % ls zmux
+    __init__.py     __main__.py     __pycache__     cli.py
+
 ## Installation
 
-Install this tool using `pip`:
+Installation using `pipx` is recommended:
+
+    pipx install zmux
+
+Or using `pip`:
 
     pip install zmux
 
