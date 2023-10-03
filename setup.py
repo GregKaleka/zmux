@@ -31,7 +31,7 @@ setup(
         [console_scripts]
         zmux=zmux.cli:cli
     """,
-    install_requires=["click"],
+    install_requires=["click", "libtmux", "yaspin"],
     extras_require={
         "test": ["pytest"]
     },
